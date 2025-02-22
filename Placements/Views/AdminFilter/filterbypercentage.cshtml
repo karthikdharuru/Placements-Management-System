@@ -1,0 +1,52 @@
+﻿@model Placements_Model.Models.Student
+
+@{
+    ViewBag.Title = "filterpercentage";
+}
+
+
+@Styles.Render("~/Content/css")
+<link href="~/Content/Index.css" type="text/css" rel="stylesheet" />
+
+<center><h2>Filter By Percentage</h2></center>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <center>
+        <div class="container  filter-student">
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+            <div class="row">
+
+
+                <div class="col-md filter-student-fields">
+                    @Html.LabelFor(m => m.Percentage, "Filter the students having percentage", new { @class = "filter-text" })
+                </div>
+                <div class="col-md filter-student-fields">
+                    <select class="form-control" id="operation" name="operation" required="required">
+                        <option value="">Select operation</option>
+                        <option value="<=">Less Than Or Equal To</option>
+                        <option value=">=">Greater Than Or Equal To</option>
+                        <option value="=">Equal To</option>
+                        <option value="<">Less Than</option>
+                        <option value=">">Greater Than</option>
+                    </select>
+                </div>
+                <div class="col-md filter-student-fields">
+
+
+                    @Html.TextBoxFor(m => m.Percentage, new { @required = true, @placeholder = "percentage" })<br /><br />
+                </div>
+               
+                
+            </div>
+           
+            <input type="submit" value="Filter Students" class="btn btn-danger filter-button" />
+        </div>
+    </center>
+}
+
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/jquery.validate.min.js")
+@Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")

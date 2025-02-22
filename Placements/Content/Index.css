@@ -1,0 +1,202 @@
+﻿/*common*/
+.page-heading{
+    padding:20px;
+}
+h2{
+    font-family: Helvetica;
+    margin-top:25px;
+}
+table, th, td {
+  border:1px solid black;
+}
+th{
+    background-color:cornflowerblue;
+}
+.container {
+    
+  
+    /*increase width as per your need*/
+    width:100%!important;
+}
+h2{
+    margin-top:20px;
+}
+h4{
+    padding-top:20px;
+}
+/*navigation bar*/
+.nav-ul{
+   justify-content:space-between;
+}
+.username {
+    margin-right: 30px;
+}
+.home
+{
+    margin-right:20px;
+}
+.brand{
+    margin-left:50px;   
+}
+
+/*main page*/
+.main-title{
+    width:100%;
+    height:30px;
+    
+}
+.title-text{
+    font-family:'Times New Roman';
+   
+    font-size: 4vw;
+}
+.index-body{
+    background:url("images/indexbg.jpg") no-repeat center  fixed;
+  
+    background-size:cover;
+
+    
+    
+}
+.index{
+   margin-top:10%;
+   
+}
+.index-img{
+    
+    padding-left:80px;
+    padding-right:80px;
+    padding-bottom:20px;
+    padding-top:20px;
+}
+/*Login pages*/
+.login-body{
+    background:url('images/student bg.jpg') no-repeat center fixed;
+
+    background-size:cover;
+
+}
+.login{
+    max-width:400px;
+    max-height:400px;
+   background-color:darkseagreen;
+}
+
+  
+.label{
+    text-align:left;
+}
+.form-group{
+    margin:20px;
+}
+.login-btn{
+   margin:10px; 
+}
+/*register form*/
+.addstudent-form{
+    max-width:100%;
+    max-height:100%;
+   background-color:darkseagreen;
+}
+
+/*admin index page*/
+.admin-option{
+    margin:25px;
+    max-height:200px;
+    max-width:200px;
+}
+.admin-img{
+    width:140px;
+    height:140px;
+}
+
+
+
+/*Delete and retrieve student*/
+.search-student{
+    max-height:400px;
+    max-width:350px;
+    background-color:lightblue;
+    padding-bottom:10px;
+    margin-top:100px;
+}
+.review-heading{
+    height:35px;
+    max-width:350px;
+    background-color:#dc3545;
+}
+.StudentIdBox{
+    text-align:left;
+   
+    margin:15px;
+}
+.StudentId{
+    width:auto;
+    height:auto;
+}
+
+.delete-form{
+    background-color:darkkhaki;
+    max-width:300px;
+    max-height:100%;
+}
+
+/*filter module*/
+.filter-option{
+    margin:25px;
+    max-height:250px;
+    max-width:250px;
+   
+}
+.filter-img{
+    width:200px;
+    height:200px;
+     border:1px solid blue;
+}
+
+.filter-student{
+    margin-top:100px;
+    background-color:#f5ed0f;
+    max-width:1000px;
+    max-height:250px;
+    padding-top:25px !important;
+
+}
+
+.filter-text{
+    font-family:Arial;
+    font-size:18px;
+}
+.filter-button{
+    margin-top:15px;
+    margin-bottom:10px;
+}
+.filter-student-fields
+{
+    margin-top:10px;
+   
+}
+
+
+.student-details
+{
+    background-color:lightskyblue;
+    padding-left:20px;
+    padding-bottom:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.submit{
+    padding-bottom:10px;
+}
+
+/*shared messages*/
+.success-message{
+   margin-top:50px;
+}
+
+/*edit*/
+.edit-body{
+    background-color:darkseagreen;
+    background-size:cover;
+}

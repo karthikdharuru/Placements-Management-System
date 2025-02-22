@@ -1,0 +1,29 @@
+﻿@model Placements_Model.Models.Student
+
+@{
+    ViewBag.Title = "AcceptOrDenyStudent";
+}
+
+<link href="~/Content/Index.css" rel="stylesheet" type="text/css" />
+<div class="student-details">
+    <div>
+        <h2 class="text-center ">Student Status</h2>
+        <hr />
+        @{
+            Html.RenderPartial("studentdetailsdisplay");
+        }
+    </div>
+    <center>
+
+        <p>
+            <a href="@Url.Action("accept","adminregister",new {Email=Model.Email })">
+                <input type="submit" value="Accept" class="btn btn-danger" />
+            </a>
+            <a href="@Url.Action("reject","adminregister",new {StudentEmail=Model.Email })">
+                <input type="submit" value="Reject" class="btn btn-danger" />
+            </a>
+
+
+        </p>
+    </center>
+</div>

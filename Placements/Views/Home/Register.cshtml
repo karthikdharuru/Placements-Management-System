@@ -1,0 +1,33 @@
+﻿@model Placements_Model.Models.Student
+
+@{
+    ViewBag.Title = "Register";
+}
+<link href="@Url.Content("~/Content/Index.css")" rel="stylesheet" type="text/css" />
+
+@Styles.Render("~/Content/css")
+
+<script src="~/Scripts/Placements.js" type="text/javascript"></script>
+<body class="edit-body">
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="addstudent-form container">
+        <div class="form-horizontal row">
+
+            <center><h4 >Register</h4></center>
+            <hr />
+          
+           @{ 
+               Html.RenderPartial("student");
+
+           }
+        </div>
+    </div>
+}
+
+
+    </body>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/jquery.validate.min.js")
+@Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")

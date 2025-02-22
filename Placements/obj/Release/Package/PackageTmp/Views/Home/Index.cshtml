@@ -1,0 +1,45 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome to placement Management System</title>
+    <link href="@Url.Content("~/Content/Index.css")" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+</head>
+@*Main index page for navigation to admin or student*@
+<body class="index-body">
+    <div class="main-title">
+        <center class="text-dark title-text">Welcome to placements Managent System</center>
+    </div>
+   
+        
+       
+            <div class="index d-flex flex-wrap justify-content-center">
+               
+                    @*admin link*@
+                    <a href="/admin/login">
+
+                        <img class="index-img" src="~/Content/images/admin.gif" />
+                    </a>
+                    @*student link*@
+                    <a href="/student/login">
+                        <img class="index-img" src="~/Content/images/student.jpg" />
+                     </a>
+
+
+              
+
+                
+           </div>
+   
+        
+        
+  
+</body>
+</html>

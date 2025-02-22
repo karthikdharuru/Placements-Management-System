@@ -1,0 +1,130 @@
+﻿
+@model IEnumerable<Placements_Model.Models.Student>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentName)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.DoB)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Branch)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cgpa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Percentage)
+        </th>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Backlogs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFessPaid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPlaced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Package)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Company)
+            </th>*@
+        <th>
+            <p>action</p>
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentName)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.DoB)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobile)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Address)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Branch)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cgpa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Percentage)
+            </td>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Backlogs)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsFessPaid)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsPlaced)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Package)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Company)
+                </td>*@
+            <td>
+
+                <a href="@Url.Action("edit","adminreview",new {StudentId=item.StudentId })">
+                    <input type="submit" value="Edit" class="btn btn-outline-primary" />
+                </a>
+                <span class="btn btn-xs btn-outline-primary btnEdit" id="edit_@item.StudentId" onclick="createModal('@Url.Action("viewstudent", "adminfilter" , new {StudentId=item.StudentId })')">View</span>
+            </td>
+        </tr>
+    }
+  
+</table>
+<div class="modal fade" id="myModal" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content" id="modelContent">
+            
+        </div>
+    </div>
+</div>
+      
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.min.js">
+
+</script>
+    <script>
+    function createModal(url){
+          $('#modelContent').load(url);
+          $('#myModal').modal('show');
+          
+    }
+    </script>
+
+
+

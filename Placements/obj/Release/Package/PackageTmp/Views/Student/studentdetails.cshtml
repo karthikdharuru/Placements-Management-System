@@ -1,0 +1,152 @@
+﻿@model Placements_Model.Models.Student
+
+@{
+    ViewBag.Title = "studentdetails";
+}
+<link href="~/Content/Index.css" type="text/css" rel="stylesheet" />
+<h2 class="text-center">Student Details</h2>
+@* display student details*@
+<center>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.StudentId)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.StudentName)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DoB)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.DoB)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Email)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobile)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Mobile)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Address)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Branch)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Branch)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Cgpa)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Cgpa)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Percentage)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Percentage)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Backlogs)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.Backlogs)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IsFessPaid)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.IsFessPaid)
+            </td>
+
+        </tr>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IsPlaced)
+            </th>
+            <td>
+                @Html.DisplayFor(modelItem => Model.IsPlaced)
+            </td>
+
+        </tr>
+        @if (Model.IsPlaced == true)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Package)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Package)
+                </td>
+
+
+            </tr>
+        }
+        @if (Model.IsPlaced == true)
+        {
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Company)
+                </th>
+                <td>
+                    @Html.DisplayFor(modelItem => Model.Company)
+                </td>
+
+            </tr>
+        }
+
+
+    </table>
+    <center>
+        <a href="/student/edit">
+            <input type="button" value="Edit" class="text-danger" />
+        </a>
+    </center>
+</center>

@@ -1,0 +1,31 @@
+﻿@model Placements_Model.Models.Student
+
+@{
+    ViewBag.Title = "Review";
+}
+
+<link href="~/Content/Index.css" type="text/css" rel="stylesheet" />
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <center>
+        <div class="search-student">
+            
+            <div class="review-heading ">
+                <p class="text-light h6">Get Student</p>
+            </div>
+            @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+         
+            @Html.TextBoxFor(m => m.StudentId, new { @required = true,@placeholder="Enter the Student Id",@class="StudentIdBox"})<br /><br />
+
+            <input type="submit"  class="student-submit btn btn-danger"value="Get Student" />
+
+        </div>
+    </center>
+}
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/Scripts/jquery.validate.min.js")
+@Scripts.Render("~/Scripts/jquery.validate.unobtrusive.min.js")

@@ -1,0 +1,31 @@
+﻿@model Placements_Model.Models.Student
+
+@{
+    ViewBag.Title = "ReviewStudent";
+}
+
+<link href="@Url.Content("~/Content/Index.css")" rel="stylesheet" type="text/css" />
+@Styles.Render("~/Content/css")
+
+<div class="student-details">
+    <center><h2 >Student</h2></center>
+    <hr />
+    <div class="container">
+        
+        @{ 
+            Html.RenderPartial("studentdetailsdisplay");
+        }   
+           
+    </div>
+
+    <center>
+        <a href="@Url.Action("edit","adminreview",new {StudentId=Model.StudentId })">
+            <input type="submit" value="Edit" class="btn btn-outline-danger" />
+        </a>
+    </center>
+       
+
+ 
+
+   
+</div>

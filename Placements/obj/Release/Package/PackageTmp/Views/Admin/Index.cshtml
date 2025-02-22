@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<link href="@Url.Content("~/Content/Index.css")" rel="stylesheet" type="text/css" />
+<h2 class="text-danger text-center page-heading">Welcome to Admin Portal</h2>
+<script src="~/Scripts/Placements.js" type="text/javascript"></script>
+<div class="container">
+    <center>
+        <div class="d-flex flex-wrap justify-content-xl-between justify-content-center">
+           
+                <div class="admin-option ">
+                    <a href="/admin/addstudent">
+                        <img src="~/Content/images/add_student-removebg-preview.png" class="admin-img" />
+                    </a>
+                    <p class="text-warning h4">Add Student</p>
+                </div>
+
+
+                <div class=" admin-option">
+                    <a href="/adminreview/reviewstudent">
+                        <img src="~/Content/images/editstudent.png" class="admin-img" />
+                    </a>
+                    <p class="text-warning h4">Edit Student</p>
+                </div>
+
+
+                <div class="admin-option">
+                    <a href="/admindelete/delete">
+                        <img src="~/Content/images/deletestudent-removebg-preview.png" class="admin-img" />
+                    </a>
+                    <p class="text-warning h4">Delete Student</p>
+                </div>
+
+
+                <div class=" admin-option">
+                    <a href="/adminfilter/filter">
+                        <img src="~/Content/images/filter.png" class="admin-img" />
+                    </a>
+                    <p class="text-warning h4">Filter Students</p>
+                </div>
+
+                <div class=" admin-option">
+                    <a href="/adminregister/register">
+                        <img src="~/Content/images/acceptstudent.png" class="admin-img" />
+                    </a>
+                    <p class="text-warning h4">Register Student</p>
+                </div>
+            
+        </div>
+    </center>
+</div>
+
